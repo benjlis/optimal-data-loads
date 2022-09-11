@@ -1,4 +1,4 @@
-create table corps (
+create table companies (
   lei                            text primary key,
   lname                          text not null,
   jurisdiction                   text,
@@ -8,4 +8,4 @@ create table corps (
   init_reg                       date not null,
   next_renewal                   date not null,
   last_update                    timestamp with time zone not null,
-  managing_lou                   text not null foreign key references corps);
+  managing_lou                   text not null references companies);
