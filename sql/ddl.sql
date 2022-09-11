@@ -9,9 +9,3 @@ create table corps (
   next_renewal                   date not null,
   last_update                    timestamp with time zone not null,
   managing_lou                   text not null foreign key references corps);
-
-create table securities (
-      lei       text,
-      isin      text,
-      primary key (lei, isin),
-      foreign key (lei) references corps);
