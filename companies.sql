@@ -8,4 +8,4 @@ create table companies (
   init_reg                       date not null,
   next_renewal                   date not null,
   last_update                    timestamp with time zone not null,
-  managing_lou                   text not null references companies);
+  managing_lou                   text not null);
