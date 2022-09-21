@@ -10,3 +10,9 @@ alter table companies add primary key (lei);
 alter table companies set unlogged;
 \copy companies from 'companies.csv' CSV
 alter table companies set logged;
+--
+-- make table unlogged, after understanding consequences
+alter table companies set unlogged;
+alter table companies drop constraint companies_pkey;
+\copy companies from 'companies.csv' CSV
+alter table companies add primary key (lei);
